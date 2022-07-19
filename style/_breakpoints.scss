@@ -1,0 +1,22 @@
+$breakpoints:(
+    "mobile":375px,
+    "desktop":1440px
+);
+
+@mixin desktop{
+    @media (max-width:map-get($breakpoints, "desktop")){
+        @content;
+    }
+}
+@mixin mobile{
+    @media (max-width: map-get($breakpoints, "mobile")){
+        @content;
+    }
+}
+
+
+// @mixin deviceBreakPoints($bg:0){
+//     @media (max-width:$bg){
+//         @content;
+//     }
+// }

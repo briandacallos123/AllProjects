@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Fylo landing page with two column layout</title>
+  <link rel="stylesheet" href="./style/style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <script defer src="./script.js"></script>
+  <script defer src="https://kit.fontawesome.com/9df3c0bdcd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="container">
+    <div class="container_indent">
+    <header class="header_container">
+        <div class="header_container_brand">
+          <img src="./images/logo.svg" alt="">
+        </div>
+        <!-- nav -->
+        <nav class="header_container_nav">
+          <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Teams</a></li>
+            <li><a href="#">Sign in</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <!-- main -->
+    <main>
+     <div class="container_indent">
+      <section class="main_section">
+        <div class="main_section_left">
+          <h1 class="main_section_left_heading">
+            All your files in one secure location, accessible anywhere.
+          </h1>
+          <p class="main_section_left_paragraph">
+            Fylo stores your most important files in one secure location. 
+            Access them wherever you need, share and collaborate with friends, 
+            family, and co-workers.
+          </p>
+          <!-- form -->
+          <div class="main_section_left_form">
+            <input type="text" placeholder="Enter your email..." class="main_section_form_text">
+            <button class="btn btn-submit">Get Started</button>
+          </div>
+        </div>
+        <div class="main_section_right"></div>
+      </section>
+    </div>
+      <!-- another section -->
+      <section class="section_sub_main">
+        <div class="section_sub_main_indent">
+          <div class="section_sub_main_indent_left">
+            <h1 class="section_sub_main_indent_left_heading">
+              Stay productive, wherever you are
+            </h1>
+            <p class="section_sub_main_indent_left_paragraph">
+              Never let location be an issue when accessing your files. Fylo has you 
+              covered for all of your file storage needs.
+            </p>
+            <p class="section_sub_main_indent_left_paragraph_2">
+              Securely share files and folders with friends, family and colleagues for 
+              live collaboration. No email attachments required!
+            </p>
+            <span class="section_sub_main_indent_left_span">
+              <button>See how Fylo works</button>
+              <img src="./images/icon-arrow.svg" alt="">
+            </span>
+    
+            <!-- comment container -->
+            <div class="section_sub_main_indent_left_comment">
+              <img class="section_sub_main_indent_left_comment_img" src="./images/icon-quotes.svg" alt="" class="section_sub_main_indent_left_comment_img">
+
+              <p class="section_sub_main_indent_left_comment_text">
+                Fylo has improved our team productivity by an order of magnitude. Since 
+      making the switch our team has become a well-oiled collaboration machine.
+              </p>
+              <span class="section_sub_main_indent_left_comment_span">
+                <img src="./images/avatar-testimonial.jpg" alt="">
+
+                <div class="section_sub_main_indent_left_comment_span_userinfo">
+                  <h6>Kyle Burton </h6>
+                  <small>Founder & CEO, Huddle</small>
+                </div>
+              </span>
+          </div>
+        </div>
+        <div class="section_sub_main_indent_right">
+        </div>
+      </div>
+      </section>
+    </main>
+   
+    <!-- footer -->
+    <div class="pre_footer">
+        <div class="container_indent my-preFooter">
+          <div class="container_indent_left">
+            <h2 class="container_indent_left_heading">
+              Get early access today
+            </h2>
+            <p class="container_indent_left_paragraph">
+              It only takes a minute to sign up and our free starter tier is extremely generous. 
+              If you have any questions, our support team would be happy to help you.
+            </p>
+            </div>
+            <div class="container_indent_right">
+              <input type="text" placeholder="example email...." class="container_indent_right_input">
+              <button>Get Started For Free</button>
+           </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="container_indent myfooter">
+          <div class="container_indent_main_footer">
+            <div class="container_indent_main_footer_col1">
+              
+                <span><img src="./images/icon-phone.svg" alt=""> Phone: +1-543-123-4567</span>
+                <span><img src="./images/icon-email.svg" alt="">Example@fylo.com</span>
+              </div>
+              <div class="container_indent_main_footer_col2">
+                <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Jobs</a></li>
+                  <li><a href="#">Press</a></li>
+                  <li><a href="#">Blog</a></li>
+                </ul>
+              </div>
+              <div class="container_indent_main_footer_col3">
+                <ul>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Terms</a></li>
+                  <li><a href="#">Privacy</a></li>
+                </ul>
+              </div>
+              <div class="container_indent_main_footer_col4">
+                <ul>
+                  <span class="icon"><i class="fa-brands fa-facebook-f"></i></span>
+                  <span class="icon"><i class="fa-brands fa-twitter"></i></span>
+                  <span class="icon"><i class="fa-brands fa-instagram"></i></span>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+<!--           
+        
+        </div>
+      </div>
+
+  <!-- F
+    sc
+
+
+ 
+
+
+
+
+
+  Phone: +1-543-123-4567
+  example@fylo.com
+
+  About Us
+  Jobs
+  Press
+  Blog
+
+  Contact Us
+  Terms
+  Privacy
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer> -->
+
+</body>
+</html>

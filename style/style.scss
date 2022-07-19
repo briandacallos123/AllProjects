@@ -1,0 +1,60 @@
+
+@import './variables';
+@import './color';
+@import './breakpoints';
+@import './mixin';
+@import './header';
+@import './main';
+@import './submain';
+@import './footer';
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style:none;
+    // overflow-x: hidden;
+}
+body{
+    font-family: $font_family_body;
+    line-height: 2rem;
+
+
+}
+p{
+    font-size: $font_size_paragraph;
+
+    @include mobile{
+        font-size: $font_size_mb_paragraph;
+        line-height: 1.3rem;
+    }
+}
+.container_indent{
+    max-width:$desktop_vp;
+    margin:0 auto;
+}
+.show{
+    opacity:1;
+    transform:translateX(0px);
+}
+.btn{
+    flex:1;
+    font-size: $font_size_paragraph;
+    font-family: $font_family;
+    font-weight: $font_weights2;
+    padding:.6em;
+    background-color:$Bright_Blue;
+    color:white;
+    border:0;
+    cursor:pointer;
+    transition:all .2s ease-in;
+
+    @include mobile{
+        font-size: $font_size_mb_paragraph;
+    }
+
+}
+
+
+

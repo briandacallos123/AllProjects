@@ -1,0 +1,132 @@
+.main_section{
+  
+    height: calc(100vh - 146px);
+    @include flex(row, space-between, center);
+
+    transform:translateX(-50%);
+    opacity:0;
+    animation: brix .3s ease forwards;
+
+    @keyframes brix{
+        from{
+            opacity:0;
+            transform:translateX(-50%);
+        }
+        to{
+            opacity:1;
+            transform:translateX(0%);
+        }
+    }
+
+
+    &_left{
+        width:45%;
+        @include flex(column, space-between, flex-start);
+        // height:50
+        &_heading{
+            color:$Very_Dark_Blue;
+            font-size: $font_size_big_heading;
+            font-family: $font_family;
+            line-height: 4rem;
+            font-weight:$font_weights2;
+        }
+        &_paragraph{
+            margin-bottom: 1rem;
+        }
+        &_form{
+           width:90%;
+           @include flex(row, space-around, center);
+
+           input{
+            flex:2;
+            margin-right:2rem;
+            padding:1rem;
+            font-size: $font_size_paragraph;
+            border-radius:5px;
+           }
+           button{
+            
+            &:hover{
+                background-color:$dark_blue;
+                // transition:all .5s ease-in;
+            }
+
+           }
+            
+        }
+    }
+    &_right{
+        background-image:url('../images/illustration-1.svg');
+        background-size: contain;
+        background-repeat:no-repeat;
+        background-position: center;
+        width:45%;
+        height:100%;
+    }
+
+    @include mobile{
+        @include flex(column, center, center);
+        height:calc(100vh - 49px);
+        // background-color: red;
+        &_right{
+            // background-color:red;
+            padding:1rem;
+            order:-1;
+            width:100%;
+            height:50%;
+        }
+        &_left{
+            // height: 0;
+            width:100%;
+            height:50%;
+            padding:0;
+             @include flex(column, flex-start, center);
+            &_heading{
+                color:$Very_Dark_Blue;
+                font-size: $font_size_mb_big_heading;
+                font-family: $font_family_body;
+                line-height: 1.5rem;
+                font-weight:900;
+                text-align: center;
+                padding:1rem;
+            }
+            &_paragraph{
+                margin-bottom:0;
+                text-align: center;
+                padding:1rem;
+            }
+    
+            // form
+    
+            &_form{
+               width:90%;
+               @include flex(column, space-around, center);
+                // background-color: red;
+                padding:0 1rem;
+               input{
+                // flex:2;
+                // margin-right:2rem;
+                padding:.7em;
+                margin-right: 0;
+                font-size: .8rem;
+                border-radius:0;
+                border:0;
+                width:100%;
+                margin-bottom: .5rem;
+                box-shadow: 1px 1px .5px rgba(0,0,0,0.2), -1px -1px .5px rgba(0,0,0,0.2);
+               }
+               button{
+                width:100%;
+                font-weight: $font_weights2;
+                &:hover{
+                    background-color:$dark_blue;
+                    // transition:all .5s ease-in;
+                }
+    
+               }
+                
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,106 @@
+
+.header_container{
+    @include flex(row, space-between, center);
+    font-family: $font_family;
+    font-weight: $font_weights2;
+    padding:1.5rem;
+
+    @include mobile{
+        padding:0;
+    }
+ 
+
+    &_brand{
+        img{
+            object-fit: cover;
+            animation:rica $nav-duration ease forwards $nav-delay-img;
+            padding:1rem;
+            transform: translateX(-1000%);
+            opacity:0;
+
+           
+            @keyframes rica{
+                0%{
+                    transform:translateX(-1000%);
+                    opacity:0;
+                }
+                55%{
+                    transform:translateX(50%);
+                    opacity:.5;
+                }
+                100%{
+                    transform:translateX(0%);
+                    opacity:1;
+                }
+               
+            }
+
+            @include mobile{
+                padding:0 .5rem;
+                width:80px;
+                // height:;
+            }
+        }
+        
+    }
+    &_nav{
+        padding:2rem 0;
+        transform: translateY(-100%);
+        animation:brian $nav-duration ease forwards .5s;
+    
+        @keyframes brian {
+            from{
+                transform: translateY(-100%);
+            }
+            to{
+                transform: translateY(0%);
+            }
+        }
+       ul{
+         @include flex(row, space-between, center);
+        list-style: none;
+         li{
+            margin:0 1.5rem;
+            
+
+            a{
+                text-decoration: none;
+                color:$Desaturated_Blue;
+                font-size: $font_size_heading;
+                position:relative;
+                padding:.7rem 0;
+
+                &::after{
+                    content:"";
+                    position: absolute;
+                    top:100%;
+                    width:0;
+                    left:50%;
+                    height:3px;
+                    background-color:$Bright_Blue;
+                    opacity:.4;
+                    margin:0 auto;
+                    transform:translate(-50%, -50%);
+
+                    transition:all .5s ease;
+                }
+                &:hover::after{
+                    width:100%;
+                }
+
+                @include mobile{
+                    font-size: $font_size_mb_paragraph;
+                }
+               
+            }
+            @include mobile{
+                margin:.5rem;
+            }
+         }
+       }
+    //    responsive
+       @include mobile{
+        padding:0;
+       }
+    }
+}

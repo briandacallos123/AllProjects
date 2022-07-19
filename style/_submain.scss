@@ -1,0 +1,211 @@
+.section_sub_main{
+    height: 100vh;
+    background-image: url('../images/bg-curve-desktop.svg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: bottom center;
+    padding-top:1.5rem;
+    @include flex(row, center,center);
+
+    &_indent{
+        @extend .container_indent;
+        @include flex(row, space-between, center);
+        &_left{
+            
+            width:50%;
+            height: 80vh;
+            // background-color:red;
+
+            // toleft
+         
+           
+            &_heading{
+                @extend .main_section_left_heading;
+                // margin-bottom:2rem;
+                opacity:0;
+                transform: translateX(-150px);
+                transition:all 1.5s ease;
+
+              
+            }
+            &_paragraph{
+                margin:1.5rem 0;
+                transform: translateX(400px);
+                opacity:0;
+                transition:all 1.5s ease;
+            }
+            &_paragraph_2{
+                @extend .section_sub_main_indent_left_paragraph;
+            }
+            &_span{
+                margin-bottom: 1.5rem;
+                @include flex(row, flex-start, center);
+                transform:translateX(-200px);
+                opacity:0;
+                transition: all 1s ease;
+
+                button{
+                    border:0;
+                    background-color:none;
+                    color:$Moderate_Cyan;
+                    cursor:pointer;
+                    font-size: $font_size_paragraph;
+                }
+                img{
+                    width:30px;
+                    height:30px;
+                }
+            }
+            &_comment{
+                box-shadow: 0 0 5px rgba(0,0,0,.3);
+                width:70%;
+                padding:1.2rem;
+                border-radius:.5rem;
+                opacity:0;
+                transform: translateY(100px);
+                transition:transform 2s ease ;
+
+                &_img{
+                    width:20px;
+                    height:20px;
+                }
+                &_span{
+
+                    @include flex(row, flex-start, center);
+                    margin-top:1rem;
+
+                    img {
+                        border-radius: 50%;
+                        width:50px;
+                        height:50px;
+                    }
+                    &_userinfo{
+                        margin-left:1rem;
+                        h6{
+                            font-weight: $font_weights2;
+                            font-size:1.2rem;
+                        }
+                    }
+                }
+            }
+          
+            
+        }
+        &_right{
+            background-image: url('../images/illustration-2.svg');
+            background-size:contain;
+            background-position:top;
+            background-repeat:no-repeat;
+            height:60vh;
+            width:50%;
+            // margin:0 auto;
+            transform:translateX(200px);
+            opacity:0;
+            transition:all 1s ease;
+        }
+    }
+    @include mobile{
+        // padding-top:1.5rem;
+        // height: 0;
+        height:100%;
+         padding:1rem;
+        &_indent{
+            @include flex(column, center, center);
+
+            &_left{
+                width:100%;
+                
+                &_heading{
+                    @extend .main_section_left_heading;
+                    // margin-bottom:2rem;
+                    opacity:0;
+                    transform: translateX(-150px);
+                    transition:all 1.5s ease;
+                    transform:translateX(0);
+                 }   
+
+                &_paragraph{
+                    margin:1rem 0;
+                    transform: translateX(400px);
+                    opacity:0;
+                    transition:all 1.5s ease;
+                }
+                 &_paragraph_2{
+                    @extend .section_sub_main_indent_left_paragraph;
+                    // margin-top:-1rem;
+                 }
+                   &_span{
+                        // margin-bottom: 1.5rem;
+                        @include flex(row, center, center);
+                        transform:translateX(-200px);
+                        opacity:0;
+                        transition: all 1s ease;
+                        // background-color: red;
+
+                        button{
+                            border:0;
+                            background-color:none;
+                            color:$Moderate_Cyan;
+                            cursor:pointer;
+                            font-size: $font_size_mb_paragraph;
+                            // text-decoration: underline;
+                            border-bottom:1px solid $Moderate_Cyan;
+                            // padding:.3rem 0;
+                        }
+                        img{
+                            width:30px;
+                            height:30px;
+                        }
+                 }
+                 &_comment{
+                    box-shadow: 0 0 5px rgba(0,0,0,.3);
+                    width:80%;
+                    // padding:1rem;
+                    border-radius:.5rem;
+                    opacity:0;
+                    transform: translateY(100px);
+                    transition:transform 2s ease ;
+                    margin:0 auto;
+                    margin-top:-1rem;
+    
+                    &_text{
+                        margin-bottom: -10px;
+                    }
+                    &_img{
+                        width:10px;
+                        height:10px;
+                    }
+                    &_span{
+    
+                        @include flex(row, flex-start, center);
+                        // margin-top:1rem;
+    
+                        img {
+                            border-radius: 50%;
+                            width:30px;
+                            height:30px;
+                        }
+                        &_userinfo{
+                            // margin-left:.7rem;
+                            h6{
+                                font-weight:$font_weights2;
+                                font-size:$font_size_mb_paragraph;
+                                margin-bottom:-10px;
+                            }
+                           
+                        }
+                    }
+                }
+            }
+            &_right{
+                order:-1;
+                // background-color: blue;
+                width:95%;  
+                margin-top:1.5rem;
+            }
+            
+        }
+
+    }
+   
+}
